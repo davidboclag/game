@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## ¡Antes que nada!
 
-Recuerda hacer npm install antes de arrancar el proyecto
+Recuerda ejecutar en consola `npm install` antes de arrancar el proyecto
 
 ## Development server
 

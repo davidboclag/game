@@ -1,7 +1,40 @@
-<h3>Numbers</h3>
+<div class="card" *ngIf="!winner">
+    <div class="container-fluid mt-5">
+        <h3 class="text-center">Numbers</h3>
 
-<div class="row">
-    <div class="ball text-center" *ngFor="let ball of balls">
-        <p>{{ ball.value }}</p>
+        <div class="row vertical-center">
+            <ng-container *ngFor="let ball of balls; let indice = index">
+                <div class="vertical-center ball" [ngStyle]="{'background-color': ball.color}"
+                    (click)="selectionBall(indice)">
+                    {{ ball.value }}
+                </div>
+            </ng-container>
+
+        </div>
+
+        <div class="row mt-5">
+            <div class="col text-center">
+                <input type="button" class="btn btn-primary btn-sm" value="Clear selection"
+                    (click)="clearSelection()" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card" *ngIf="winner">
+    <div class="container-fluid mt-5">
+        <h5 class="text-center">Result</h5>
+
+        <div class="row vertical-center">
+            <div class="vertical-center ball" [ngStyle]="{'background-color': balls[ballSelected].colorOriginal}">
+                {{ balls[ballSelected].value }}
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col text-center">
+                <h5 class="text-success">YOU WON</h5>
+            </div>
+        </div>
     </div>
 </div>

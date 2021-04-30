@@ -1,1 +1,34 @@
-<p>bet-slip works!</p>
+<div class="card">
+    <div class="row vertical-center mt-3">
+        <div class="vertical-center ball-sm" [ngStyle]="getStyleBalls(i)" *ngFor="let i of lastBalls">
+            <span *ngIf="balls[i] != null">
+                {{ balls[i].value }}
+            </span>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col">
+            <div class="input-group p-5">
+                <span class="input-group-text" id="cantidadApostada">5x</span>
+                <input type="number" [(ngModel)]="cantidadApostada" class="form-control" placeholder="Ingrese cantidad"
+                    aria-describedby="cantidadApostada" min="1" />
+                <input type="button" class="btn btn btn-primary" value="OK" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <p class="text-center">Total: {{5 * cantidadApostada }}€</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <input type="button" class="btn btn btn-primary btn-block" value="Place bet" (click)="playGame()" />
+    </div>
+</div>
+
+<div class="alert alert-warning" role="alert" *ngIf="message !== ''">{{ message }}</div>

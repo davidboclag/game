@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: gainsboro !important;
+}
+
+.ball {
+    font-weight: bold;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 2em;
+    margin: 0.1em;
+    border: 1px solid grey;
+}
+
+.ball-sm {
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    border-radius: 2em;
+    margin: 0.1em;
+    border: 1px solid grey;
+}
+
+.ball:hover {
+    border: 0.2em solid blue;
+}
+
+.vertical-center { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

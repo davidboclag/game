@@ -6,46 +6,58 @@ export const environment = {
   production: false,
   balls: [
     {
+      colorOriginal: "red",
       color: "red",
       value: 1
     },
     {
-      color: "red",
+      colorOriginal: "#ffffe6",
+      color: "#ffffe6",
       value: 2
     },
     {
-      color: "red",
+      colorOriginal: "green",
+      color: "green",
       value: 3
     },
     {
-      color: "red",
+      colorOriginal: "#ffe6f2",
+      color: "#ffe6f2",
       value: 4
     },
     {
-      color: "red",
+      colorOriginal: "yellow",
+      color: "yellow",
       value: 5
     },
     {
-      color: "red",
+      colorOriginal: "#f2f2f2",
+      color: "#f2f2f2",
       value: 6
     },
     {
+      colorOriginal: "red",
       color: "red",
       value: 7
     },
     {
-      color: "red",
+      colorOriginal: "#ffffe6",
+      color: "#ffffe6",
       value: 8
     },
     {
-      color: "red",
+      colorOriginal: "green",
+      color: "green",
       value: 9
     },
     {
-      color: "red",
+      colorOriginal: "#ffe6f2",
+      color: "#ffe6f2",
       value: 10
     }
-  ]
+  ],
+
+  lastBalls: [0,3,7,5,2, null, null, null, null, null]
 };
 
 /*
